@@ -17,7 +17,7 @@ import Modal from "@mui/material/Modal";
 
 import CriarTarefa from "./CriarTarefa";
 import EditarTarefa from "./EditarTarefa";
-import { Tooltip } from "@mui/material";
+import { Container, Tooltip } from "@mui/material";
 
 //A função abaixo é usada para criar o array contendo os dados iniciais da listagem de tarefas.
 function createData(
@@ -138,8 +138,8 @@ const ListarTarefa = () => {
   };
 
   return (
-    <>
-      <Card>
+    <Container maxWidth="lg" sx={{ marginTop: "2rem" }}>
+      <Card variant="outlined">
         <CardHeader title="Tarefas" subheader="Listagem de Tarefas" />
         <CardContent>
           <TableContainer component={Paper}>
@@ -249,7 +249,7 @@ const ListarTarefa = () => {
           </div>
         </Modal>
       </div>
-    </>
+    </Container>
   );
 };
 
